@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank You - iBuyAllShoes</title>
+    <meta name="description" content="Thank you for submitting your collection details. We'll get back to you within 24 hours.">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="page-header">
+        <div class="container">
+            <a href="index.html" class="logo">iBuyAllShoes</a>
+        </div>
+    </header>
+
+    <!-- Thank You Section -->
+    <section class="thank-you-section">
+        <div class="container">
+            <div class="thank-you-content">
+                <div class="success-icon">
+                    <svg width="80" height="80" viewBox="0 0 80 80" fill="none">
+                        <circle cx="40" cy="40" r="40" fill="#4CAF50"/>
+                        <path d="M25 40L35 50L55 30" stroke="white" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </div>
+                
+                <h1>Thank You!</h1>
+                <p class="thank-you-subtitle">We've received your collection details and will get back to you within 24 hours with a fair offer.</p>
+                
+                <div class="next-steps">
+                    <h2>What Happens Next?</h2>
+                    <div class="steps-timeline">
+                        <div class="timeline-step">
+                            <div class="timeline-number">1</div>
+                            <div class="timeline-content">
+                                <h3>Review Your Collection</h3>
+                                <p>Our team will review your collection details and research current market values.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-step">
+                            <div class="timeline-number">2</div>
+                            <div class="timeline-content">
+                                <h3>Get Your Quote</h3>
+                                <p>We'll contact you within 24 hours with a fair, no-obligation offer.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-step">
+                            <div class="timeline-number">3</div>
+                            <div class="timeline-content">
+                                <h3>Get Paid</h3>
+                                <p>Accept our offer and get paid instantly. We handle pickup and payment.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="contact-info">
+                    <h2>Questions? Follow Us on Instagram</h2>
+                    <p>Stay updated and see examples of collections we've bought.</p>
+                    <a href="https://instagram.com/ibuyallshoes" target="_blank" class="btn btn-primary btn-large instagram-btn">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                        </svg>
+                        Follow @ibuyallshoes
+                    </a>
+                </div>
+                
+                <div class="back-to-home">
+                    <a href="index.html" class="btn btn-secondary">Back to Home</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 I Buy All Shoes. All rights reserved. | <a href="privacy-policy.html">Privacy Policy</a></p>
+        </div>
+    </footer>
+
+    <script>
+        // Display submitted form data if available
+        window.addEventListener('load', function() {
+            const formData = localStorage.getItem('collectionFormData');
+            if (formData) {
+                const data = JSON.parse(formData);
+                console.log('Form submitted by:', data.name, 'from', data.city);
+                // Clear the stored data
+                localStorage.removeItem('collectionFormData');
+            }
+        });
+    </script>
+</body>
+</html>

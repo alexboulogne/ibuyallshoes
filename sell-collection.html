@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sell Your Collection - iBuyAllShoes</title>
+    <meta name="description" content="Get a quote for your sneaker collection. Fill out our simple form and get paid top dollar for your kicks.">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="page-header">
+        <div class="container">
+            <a href="index.html" class="logo">I Buy All Shoes</a>
+        </div>
+    </header>
+
+    <!-- Form Section -->
+    <section class="form-section">
+        <div class="container">
+            <div class="form-container">
+                <div class="form-header">
+                    <h1>Sell Your Sneaker Collection</h1>
+                    <p>Fill out the form below and we'll get back to you within 24 hours with a fair offer for your collection.</p>
+                </div>
+                
+                <form class="collection-form" id="collectionForm">
+                    <div class="form-group">
+                        <label for="name">Name *</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="city">City *</label>
+                        <input type="text" id="city" name="city" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="phone">Phone Number *</label>
+                        <input type="tel" id="phone" name="phone" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="pairs">Number of Pairs *</label>
+                        <select id="pairs" name="pairs" required>
+                            <option value="">Select number of pairs</option>
+                            <option value="0-50">0-50 pairs</option>
+                            <option value="51-200">51-200 pairs</option>
+                            <option value="201-400">201-400 pairs</option>
+                            <option value="400+">400+ pairs</option>
+                        </select>
+                    </div>
+                    
+                    
+                    <div class="form-group">
+                        <label for="condition">Overall Condition</label>
+                        <select id="condition" name="condition">
+                            <option value="">Select condition</option>
+                            <option value="deadstock">Deadstock (Brand New)</option>
+                            <option value="excellent">Excellent (Worn 1-2 times)</option>
+                            <option value="good">Good (Light wear)</option>
+                            <option value="fair">Fair (Moderate wear)</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message">Additional Details (Optional)</label>
+                        <textarea id="message" name="message" rows="4" placeholder="Tell us more about your collection, any rare pairs, or special circumstances..."></textarea>
+                    </div>
+                    
+                    <button type="submit" class="btn btn-primary btn-large">Get My Quote</button>
+                </form>
+                
+                <div class="form-disclaimer">
+                    <p>By submitting this form, you agree to our <a href="privacy-policy.html" target="_blank">Privacy Policy</a>. We will only use your information to contact you about your sneaker collection and will not share it with third parties.</p>
+                </div>
+                
+                <div class="form-benefits">
+                    <h3>Why Choose Us?</h3>
+                    <ul>
+                        <li>✓ Fair market value offers</li>
+                        <li>✓ No lowball tactics</li>
+                        <li>✓ Fast 24-hour response</li>
+                        <li>✓ Cash payouts</li>
+                        <li>✓ Buying used & new (all sizes)</li>
+                        <li>✓ We'll pull up to you</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trust Section -->
+    <section class="trust-section">
+        <div class="container">
+            <h2>Trusted by Hundreds of Sellers</h2>
+            <div class="trust-stats">
+                <div class="trust-stat">
+                    <span class="trust-number">$2M+</span>
+                    <span class="trust-label">Total Paid Out</span>
+                </div>
+                <div class="trust-stat">
+                    <span class="trust-number">500+</span>
+                    <span class="trust-label">Collections Bought</span>
+                </div>
+                <div class="trust-stat">
+                    <span class="trust-number">4.9/5</span>
+                    <span class="trust-label">Seller Rating</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 I Buy All Shoes. All rights reserved. | <a href="privacy-policy.html">Privacy Policy</a></p>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('collectionForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Get form data
+            const formData = new FormData(this);
+            const data = Object.fromEntries(formData);
+            
+            // Store form data in localStorage for the thank you page
+            localStorage.setItem('collectionFormData', JSON.stringify(data));
+            
+            // Redirect to thank you page
+            window.location.href = 'thank-you.html';
+        });
+    </script>
+</body>
+</html>
