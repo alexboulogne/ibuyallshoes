@@ -1043,6 +1043,10 @@ p {
         gap: 15px;
     }
     
+    .instruction-step {
+        align-items: center;
+    }
+    
     .benefits-grid {
         grid-template-columns: 1fr;
     }
