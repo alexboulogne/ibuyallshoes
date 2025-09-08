@@ -365,6 +365,10 @@ p {
     transition: transform 0.3s ease;
 }
 
+.testimonial-card:first-child .testimonial-image img {
+    object-position: center 20%;
+}
+
 .testimonial-card:hover .testimonial-image img {
     transform: scale(1.05);
 }
@@ -376,7 +380,7 @@ p {
     right: 0;
     background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
     color: white;
-    padding: 30px 20px 20px;
+    padding: 30px 20px 25px;
     transform: translateY(20px);
     transition: transform 0.3s ease;
 }
@@ -501,6 +505,7 @@ p {
     .testimonials-grid {
         grid-template-columns: repeat(2, 1fr);
         gap: 15px;
+        padding: 0 15px;
     }
     
     .testimonial-image {
@@ -552,6 +557,7 @@ p {
     .testimonials-grid {
         grid-template-columns: 1fr;
         gap: 15px;
+        padding: 0 15px;
     }
     
     .brands-row {
